@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyContext } from "../context";
 
-const Headbar = ({ text, color }) => {
-  const color1 = color === "Light" ? "Dark" : "Light";
+const Headbar = () => {
+  const context = useContext(MyContext);
+
   return (
-    <div className="flex items-center justify-between pt-8  lg:px-40 ">
+    <div className="flex items-center justify-between px-2 pt-8 lg:px-40 fixed w-full top-0 left-0  bg-black">
       <a
+        onClick={() => context.setActive(false)}
         href="/#home"
-        className={`text-3xl font-lato text-ore${color} cursor-pointer`}
+        className={`text-3xl font-lato text-oreLight cursor-pointer  z-20`}
       >
         <span className="-mr-0.5">O</span>
         <span className="font-black">
           <i>regano</i>
         </span>
       </a>
-      <div className={`font-merriweather text-ore${color1}`}>{text}</div>
+      <div className={`font-merriweather text-oreDark z-20`}>
+        LET'S GET STARTED
+      </div>
     </div>
   );
 };

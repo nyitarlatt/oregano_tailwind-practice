@@ -1,13 +1,13 @@
 import React from "react";
-import Headbar from "./HeadBar";
-import FooterBar from "./FooterBar";
+
+import { bg } from "../assets";
 
 const About = () => {
   return (
-    <div>
-      <div className="container">
-        <Headbar text="WHO ARE WE" color="Dark" />
-        <FooterBar color="Dark" />
+    <div id="about">
+      <div className="flex flex-col md:flex-row ">
+        <div className="flex-1 h-auto min-h-screen bg-oreLight"></div>
+        <div className="flex-1 h-auto min-h-screen bg-oreDark">aa</div>
       </div>
     </div>
   );
