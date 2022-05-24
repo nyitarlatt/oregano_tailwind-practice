@@ -9,7 +9,7 @@ const FooterBar = () => {
   const context = useContext(MyContext);
 
   return (
-    <div className="flex items-center justify-between px-2 pb-8 lg:px-40 fixed w-full bottom-0 left-0">
+    <div className="flex items-center justify-between px-2 pb-8 lg:px-40 fixed w-full bottom-0 left-0 z-10">
       <div
         className={`flex space-x-3 text-sm md:space-x-16 text-merrieather md:text-lg ${
           context.state.active === "About" || context.state.active === "Contact"
@@ -47,20 +47,83 @@ const FooterBar = () => {
       </div>
       <div className="flex space-x-3 md:space-x-8">
         <a
-          href="#"
-          className={`p-1 text-oreDark border-oreDark border-2 rounded-full hover:bg-oreDark hover:text-oreLight flex justify-center items-center`}
+          href="https://twitter.com/nyitarlatt1"
+          target={"_"}
+          className={`p-1 ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "text-oreLight"
+              : "text-oreDark"
+          } ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "border-oreLight"
+              : "border-oreDark"
+          } border-2 rounded-full ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "hover:bg-oreLight"
+              : "hover:bg-oreDark"
+          } ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "hover:text-oreDark"
+              : "hover:text-oreLight"
+          } flex justify-center items-center`}
         >
           <TwitterIcon />
         </a>
         <a
-          href="#"
-          className={`p-1 text-oreDark border-oreDark border-2 rounded-full hover:bg-oreDark hover:text-oreLight flex justify-center items-center`}
+          href="https://www.instagram.com/nyitarlatt/"
+          target={"_"}
+          className={`p-1 ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "text-oreLight"
+              : "text-oreDark"
+          } ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "border-oreLight"
+              : "border-oreDark"
+          } border-2 rounded-full ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "hover:bg-oreLight"
+              : "hover:bg-oreDark"
+          } ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "hover:text-oreDark"
+              : "hover:text-oreLight"
+          } flex justify-center items-center`}
         >
           <LinkedInIcon />
         </a>
         <a
-          href="#"
-          className={`p-1 text-oreDark border-oreDark border-2 rounded-full hover:bg-oreDark hover:text-oreLight flex justify-center items-center`}
+          href="https://github.com/nyitarlatt"
+          target={"_"}
+          className={`p-1 ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "text-oreLight"
+              : "text-oreDark"
+          } ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "border-oreLight"
+              : "border-oreDark"
+          } border-2 rounded-full ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "hover:bg-oreLight"
+              : "hover:bg-oreDark"
+          } ${
+            context.state.active === "About" ||
+            context.state.active === "Contact"
+              ? "hover:text-oreDark"
+              : "hover:text-oreLight"
+          } flex justify-center items-center`}
         >
           <GitHubIcon />
         </a>

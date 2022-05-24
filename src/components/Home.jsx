@@ -13,10 +13,7 @@ const Home = () => {
   const context = useContext(MyContext);
 
   return (
-    <section
-      id="home"
-      className="relative flex  h-auto min-h-screen fullpagescroll"
-    >
+    <section id="home" className="relative flex  h-auto min-h-screen ">
       <div className="w-1/2 bg-oreDark h-screen absolute top-0 left-0 z-0"></div>
       <div className="w-1/2 bg-oreLight h-screen absolute top-0 right-0 z-0"></div>
       <div className="h-screen w-10 z-30 fixed right-0 top-0 flex flex-col justify-between items-end py-20 pr-1 md:pr-40">

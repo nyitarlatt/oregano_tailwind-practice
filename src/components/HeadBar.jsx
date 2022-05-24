@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { MyContext } from "../context";
 
-const Headbar = () => {
+const HeadBar = () => {
   const context = useContext(MyContext);
 
   return (
-    <div className="flex items-center justify-between px-2 pt-8 lg:px-40 fixed w-full top-0 left-0 ">
+    <div className="flex items-center justify-between px-2 pt-8 lg:px-40 fixed w-full top-0 left-0 z-10">
       <a
         onClick={() => context.setActive(false)}
         href="/#home"
@@ -34,4 +34,4 @@ const Headbar = () => {
   );
 };
 
-export default Headbar;
+export default HeadBar;
