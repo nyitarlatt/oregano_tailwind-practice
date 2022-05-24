@@ -1,3 +1,37 @@
 html {
   scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+#light {
+  background-image: url("./assets/circlesm.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dark {
+  background-image: url("./assets/circlelg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#products {
+  background-image: url("./assets/img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bg {
+  background-image: url("./assets/bg.png");
+  background-position: top;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

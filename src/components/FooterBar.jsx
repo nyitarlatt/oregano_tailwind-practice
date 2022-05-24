@@ -9,32 +9,39 @@ const FooterBar = () => {
   const context = useContext(MyContext);
 
   return (
-    <div className="flex items-center justify-between px-2 pb-8 lg:px-40 fixed w-full bottom-0 bg-black left-0">
+    <div className="flex items-center justify-between px-2 pb-8 lg:px-40 fixed w-full bottom-0 left-0">
       <div
-        className={`flex space-x-3 text-sm md:space-x-16 text-merrieather md:text-lg text-oreLight`}
+        className={`flex space-x-3 text-sm md:space-x-16 text-merrieather md:text-lg ${
+          context.state.active === "About" || context.state.active === "Contact"
+            ? "text-oreDark"
+            : "text-oreLight"
+        }`}
       >
         <div onClick={context.setActive} className="relative ">
-          <a href="#about" className={`linnks hover:text-white z-10 About`}>
+          <a href="#about" className={`linnks hover:text-black z-10 About`}>
             About
           </a>
           <div
-            className={`markedpage absolute border-t-4 border-oreLight w-14 top-3 left-1 z-0 -rotate-45 hidden`}
+            className={`markedpage absolute border-t-4 border-oreDark w-14 top-3 left-1 z-0 -rotate-45 hidden`}
           ></div>
         </div>
         <div onClick={context.setActive} className="relative ">
-          <a href="#product" className={`linnks hover:text-white z-10 Product`}>
-            Product
+          <a
+            href="#products"
+            className={`linnks hover:text-white z-10 Products`}
+          >
+            Products
           </a>
           <div
             className={`markedpage absolute border-t-4 border-oreLight w-14 top-3 left-1 z-0 -rotate-45 hidden`}
           ></div>
         </div>
         <div onClick={context.setActive} className="relative ">
-          <a href="#contact" className={`linnks hover:text-white z-10 Contact`}>
+          <a href="#contact" className={`linnks hover:text-black z-10 Contact`}>
             Contact
           </a>
           <div
-            className={`markedpage absolute border-t-4 border-oreLight w-14 top-3 left-1 z-0 -rotate-45 hidden`}
+            className={`markedpage absolute border-t-4 border-oreDark w-14 top-3 left-1 z-0 -rotate-45 hidden`}
           ></div>
         </div>
       </div>
