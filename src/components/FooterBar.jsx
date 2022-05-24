@@ -74,7 +74,7 @@ const FooterBar = () => {
           <TwitterIcon />
         </a>
         <a
-          href="https://www.instagram.com/nyitarlatt/"
+          href="https://www.linkedin.com/in/nyi-tar-latt-290638226/"
           target={"_"}
           className={`p-1 ${
             context.state.active === "About" ||

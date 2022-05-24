@@ -1,3 +1,3 @@
-simple design using React + tailwind
+simple design practice using React + tailwind
 
-live -
+live - https://oregano-tailwind-practice.vercel.app/
